@@ -108,8 +108,8 @@ export const withClientState = (
         return (
           // Support nested fields
           (aliasNeeded ? aliasedNode : preAliasingNode) ||
-          (defaults || {})[fieldName]
-        );
+          (defaults || {})
+        )[fieldName];
       };
 
       if (server) operation.query = server;
